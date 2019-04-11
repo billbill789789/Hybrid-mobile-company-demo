@@ -1,0 +1,23 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu color="primary">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title><b style="color:#333d33;text-underline: black">Basic</b>HomeDemo</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content [style.background-color]="'#1d5641'">
+        <ion-list [style.background-color]="'#1d5641'">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item  color="primary" [style.color]="'green'" [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
